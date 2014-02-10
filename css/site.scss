@@ -12,15 +12,12 @@ h1 {
 }
 
 header {
-    background: linear-gradient(to left, transparent 1px, rgba(0,0,0,.5) 2px, rgba(0,0,0,.5) 6px, transparent 7px),
-              radial-gradient(#6E0064, transparent 60%) no-repeat,
-              linear-gradient(to left, #339400, #00798D);
-    background-size: 11px 100%,
-                   1600px 1000px,
-                   100% 100%;
-    background-position: 0 100%,
-                       50% -100px,
-                       0 0;
+    background: radial-gradient(#6E0064, transparent 60%) no-repeat,
+                linear-gradient(to left, #339400, #00798D);
+    background-size: 1600px 1000px,
+                     100% 100%;
+    background-position: 50% -100px,
+                         0 0;
     background-clip: none;
     height: 300px;
     width: 100%;
