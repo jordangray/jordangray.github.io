@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg">
     <font id="fancy-ampersand" horiz-adv-x="500">
         <font-face units-per-em="700" font-family="Fancy Ampersand" font-weight="normal" font-style="italic"/>
-        <glyph unicode="&amp;" horiz-adv-x="800" d="
+        <glyph unicode="&amp;" horiz-adv-x="750" d="
            M 198.35,222.66
            C 206.17,226.52 208.93,237.84 220.77,248.82
              244.95,274.75 275.68,288.51 300.86,291.41

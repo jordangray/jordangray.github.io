@@ -1,5 +1,17 @@
+@font-face {
+  font-family: 'Fancy Ampersand';
+  font-style: italic;
+  font-weight: normal;
+  src: url('fancy-ampersand.svg#fancy-ampersand') format('svg');
+}
+
+html {
+    background: #fff;
+}
+
 body {
-    font: 15px/20px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 18px/1.25 "Helvetica Neue", "Alegreya Sans", Calibri, Helvetica, Arial, sans-serif;
+    color: black;
     margin: 0;
     padding: 0;
     height: 100px;
@@ -8,57 +20,105 @@ body {
 }
 
 h1 {
+    font-size: 40px;
     font-weight: 300;
 }
 
 header {
-    background: radial-gradient(#6E0064, transparent 60%) no-repeat,
-                linear-gradient(to left, #339400, #00798D);
-    background-size: 1600px 1000px,
-                     100% 100%;
-    background-position: 50% -100px,
-                         0 0;
-    background-clip: none;
-    height: 300px;
-    width: 100%;
-}
+    background:
+        /* Pointing upwards */
+        linear-gradient( 60deg, hsla( 10,  90%,  75%,.6) 12.5%, transparent 0)   0px   0px,
+        linear-gradient(-60deg, hsla( 10,  90%,  75%,.6) 12.5%, transparent 0)   0px   0px,
+        linear-gradient( 60deg, hsla( 35,  90%,  75%,.6) 12.5%, transparent 0) 150px -86px,
+        linear-gradient(-60deg, hsla( 35,  90%,  75%,.6) 12.5%, transparent 0) 150px -86px,
+        linear-gradient( 60deg, hsla( 60,  90%,  75%,.6) 12.5%, transparent 0) 100px   0px,
+        linear-gradient(-60deg, hsla( 60,  90%,  75%,.6) 12.5%, transparent 0) 100px   0px,
+        linear-gradient( 60deg, hsla( 90,  90%,  75%,.6) 12.5%, transparent 0) 250px -86px,
+        linear-gradient(-60deg, hsla( 90,  90%,  75%,.6) 12.5%, transparent 0) 250px -86px,
+        linear-gradient( 60deg, hsla(120,  90%,  75%,.6) 12.5%, transparent 0) 200px   0px,
+        linear-gradient(-60deg, hsla(120,  90%,  75%,.6) 12.5%, transparent 0) 200px   0px,
+        linear-gradient( 60deg, hsla(100,  90%,  75%,.6) 12.5%, transparent 0)  50px -86px,
+        linear-gradient(-60deg, hsla(100,  90%,  75%,.6) 12.5%, transparent 0)  50px -86px,
 
-header h1 {
-    color: white;
-    font-family: "Alegreya Sans SC", Helvetica, Arial, sans-serif;
-    font-size: 86px;
-    font-weight: 200;
-    margin: 0;
-    padding: 100px 0 0 0;
+        /* Pointing downwards */
+        linear-gradient(120deg, hsla(180,  90%,  75%,.6) 12.5%, transparent 0)   0px   0px,
+        linear-gradient(240deg, hsla(180,  90%,  75%,.6) 12.5%, transparent 0)   0px   0px,
+        linear-gradient(120deg, hsla(210,  90%,  75%,.6) 12.5%, transparent 0) 150px -86px,
+        linear-gradient(240deg, hsla(210,  90%,  75%,.6) 12.5%, transparent 0) 150px -86px,
+        linear-gradient(120deg, hsla(240,  90%,  75%,.6) 12.5%, transparent 0) 100px   0px,
+        linear-gradient(240deg, hsla(240,  90%,  75%,.6) 12.5%, transparent 0) 100px   0px,
+        linear-gradient(120deg, hsla(270,  90%,  75%,.6) 12.5%, transparent 0) 250px -86px,
+        linear-gradient(240deg, hsla(270,  90%,  75%,.6) 12.5%, transparent 0) 250px -86px,
+        linear-gradient(120deg, hsla(300,  90%,  75%,.6) 12.5%, transparent 0) 200px   0px,
+        linear-gradient(240deg, hsla(300,  90%,  75%,.6) 12.5%, transparent 0) 200px   0px,
+        linear-gradient(120deg, hsla(330,  90%,  75%,.6) 12.5%, transparent 0)  50px -86px,
+        linear-gradient(240deg, hsla(330,  90%,  75%,.6) 12.5%, transparent 0)  50px -86px
+    ;
+    background-size: 300px 173px;
+    color: black;
+    font-family: "Alegreya Sans SC", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+    min-height: 346px;
+    width: 100%;
     position: relative;
-    text-align: center;
-    text-shadow: 0 0 50px rgba(255,255,255,.6);
-    z-index: 2;
+    text-shadow: 0 0 10px rgba(black, .4);
+    z-index: 1;
+
+    h1 {
+        font-size: 87px;
+        font-weight: 200;
+        margin: 0;
+        padding: 73px 0 0;
+        text-align: center;
+    }
+
+    p {
+        font-size: 60px;
+        margin: -38px 0 0;
+        text-align: center;
+        text-transform: lowercase;
+
+        span {
+            font-family: 'Fancy Ampersand';
+            font-size: 2em;
+            font-style: italic;
+            font-weight: normal;
+            vertical-align: middle;
+        }
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+    &:before {
+        box-shadow: 0 0 25px rgba(black, .8);
+        height: 5px;
+        bottom: -5px;
+    }
+
+    &:after {
+        background: white;
+        bottom: -30px;
+        height: 25px;
+    }
 }
 
 main {
-    margin: 2em auto;
+    margin: 3em auto;
     max-width: 1000px;
     position: relative;
     width: 80%;
     z-index: 2;
 }
 
-
-// Animation
-
-body:before,
-body:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1;
+dt {
+    font-weight: bold;
 }
 
-
-body:before {
-    height: 100px;
-    width: 100px;
-    border-radius: 20px;
+dd {
+    margin: 1em 2em;
 }
