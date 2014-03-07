@@ -11,6 +11,7 @@ html {
 
 body {
     font: 18px/1.5 "Helvetica Neue", "Open Sans", Calibri, Helvetica, Arial, sans-serif;
+    font-weight: 300;
     color: black;
     margin: 0;
     padding: 0;
@@ -22,6 +23,16 @@ body {
 h1 {
     font-size: 40px;
     font-weight: 300;
+    margin-bottom: .25em;
+}
+
+p,
+dl {
+    margin-top: .5em;
+}
+
+code {
+    font-family: Consolas, Courier New, Courier, monospace;
 }
 
 header {
@@ -119,5 +130,5 @@ dt {
 }
 
 dd {
-    margin: 1em 2em;
+    margin: .5em 2em;
 }
