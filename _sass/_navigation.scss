@@ -43,33 +43,8 @@ nav {
 			top: 100%;
 			left: -$nav-item-radius;
 
-			&:after,
-			&:before {
-				border: 1px solid hsla(0, 0%, 0%, 1);
-				animation: swirl 20s linear infinite;
-				
-				border-radius: 50%;
-				display: block;
-				content: ' ';
-				height: $nav-item-radius * 2;
-				width: $nav-item-radius * 2;
-				text-shadow: 0 0 7px #000;
-				transition: all 0.6s;
-
-				top: 0;
-				left: 0;
-			}
-
 			&:hover {
 				background: hsla(0,0%,100%,0.3);
-
-				&:after {
-				 	transform-origin: 2.98em 2.98em;
-				 }
-
-				&:before {
-				 	transform-origin: 3.1em 3.1em;
-				 }
 			}
 		}
 
