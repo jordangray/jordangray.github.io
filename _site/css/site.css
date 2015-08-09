@@ -84,7 +84,9 @@ nav li {
     top: 100%;
     left: -4em; }
     nav li a:hover {
-      background: rgba(255, 255, 255, 0.3); }
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: none;
+      color: black; }
   nav li:first-child {
     transform: rotate(45deg); }
     nav li:first-child a {
@@ -93,9 +95,3 @@ nav li {
     transform: rotate(-45deg); }
     nav li:last-child a {
       transform: rotate(45deg); }
-
-@keyframes swirl {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }

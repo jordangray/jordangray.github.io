@@ -44,7 +44,9 @@ nav {
 			left: -$nav-item-radius;
 
 			&:hover {
-				background: hsla(0,0%,100%,0.3);
+				background: hsla(0,0%,100%,0.1);
+				box-shadow: none;
+				color: black;
 			}
 		}
 
@@ -64,9 +66,4 @@ nav {
 			}
 		}
 	}
-}
-
-@keyframes swirl {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
 }
