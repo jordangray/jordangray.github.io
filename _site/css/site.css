@@ -5,6 +5,7 @@ body {
 h1,
 h2,
 h3 {
+  font-family: "Segoe UI Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
 code {
@@ -27,8 +28,6 @@ main {
   z-index: 2; }
 
 header {
-  font-family: "Segoe UI", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
-  text-align: center;
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
@@ -40,6 +39,8 @@ header {
   width: 20em;
   position: relative; }
   header div {
+    font-family: "Segoe UI Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+    text-align: center;
     margin-top: 50%;
     transform: translateY(-50%); }
   header h1 {
@@ -54,10 +55,12 @@ nav li {
   margin: 0;
   padding: 0; }
 nav ul {
+  transition: opacity 0.6s;
   position: absolute;
   left: 50%;
   top: 50%; }
 nav li {
+  transition: top 0.6s, transform-origin 0.6s, transform 0.6s;
   display: inline-block;
   list-style: none;
   position: absolute;
@@ -68,6 +71,7 @@ nav li {
     color: #fff;
     font-family: "Segoe UI", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
     font-weight: bold;
+    font-size: 1em;
     background: rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
     text-decoration: none;
@@ -84,7 +88,7 @@ nav li {
     top: 100%;
     left: -4em; }
     nav li a:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.2);
       box-shadow: none;
       color: black; }
   nav li:first-child {
@@ -95,3 +99,17 @@ nav li {
     transform: rotate(-45deg); }
     nav li:last-child a {
       transform: rotate(45deg); }
+body.collapsed nav li {
+  font-size: 0.6em; }
+  body.collapsed nav li:first-child {
+    transform: rotate(20deg); }
+    body.collapsed nav li:first-child a {
+      transform: rotate(-20deg); }
+  body.collapsed nav li:last-child {
+    transform: rotate(-20deg); }
+    body.collapsed nav li:last-child a {
+      transform: rotate(20deg); }
+body.collapsed nav a {
+  background: white;
+  color: white;
+  font-size: 0.35em; }
