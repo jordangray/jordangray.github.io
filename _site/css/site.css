@@ -61,6 +61,7 @@ nav ul {
   top: 50%; }
 nav li {
   transition: top 0.6s, transform-origin 0.6s, transform 0.6s;
+  font-size: 0.6em;
   display: inline-block;
   list-style: none;
   position: absolute;
@@ -68,14 +69,13 @@ nav li {
   left: 0;
   transform-origin: 0 -11em; }
   nav li a {
-    color: #fff;
+    transition: all 0.6s;
+    color: white;
     font-family: "Segoe UI", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 1em;
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+    font-size: 0.35em;
     text-decoration: none;
-    transition: all 0.6s;
+    background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -92,24 +92,25 @@ nav li {
       box-shadow: none;
       color: black; }
   nav li:first-child {
-    transform: rotate(45deg); }
-    nav li:first-child a {
-      transform: rotate(-45deg); }
-  nav li:last-child {
-    transform: rotate(-45deg); }
-    nav li:last-child a {
-      transform: rotate(45deg); }
-body.collapsed nav li {
-  font-size: 0.6em; }
-  body.collapsed nav li:first-child {
     transform: rotate(20deg); }
-    body.collapsed nav li:first-child a {
+    nav li:first-child a {
       transform: rotate(-20deg); }
-  body.collapsed nav li:last-child {
+  nav li:last-child {
     transform: rotate(-20deg); }
-    body.collapsed nav li:last-child a {
+    nav li:last-child a {
       transform: rotate(20deg); }
-body.collapsed nav a {
-  background: white;
+body#front-page nav li, nav.expanded li {
+  font-size: 1em; }
+  body#front-page nav li:first-child, nav.expanded li:first-child {
+    transform: rotate(45deg); }
+    body#front-page nav li:first-child a, nav.expanded li:first-child a {
+      transform: rotate(-45deg); }
+  body#front-page nav li:last-child, nav.expanded li:last-child {
+    transform: rotate(-45deg); }
+    body#front-page nav li:last-child a, nav.expanded li:last-child a {
+      transform: rotate(45deg); }
+body#front-page nav a, nav.expanded a {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
   color: white;
-  font-size: 0.35em; }
+  font-size: 1em; }

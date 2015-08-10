@@ -16,6 +16,8 @@ nav {
 	li {
 		transition: top 0.6s, transform-origin 0.6s, transform 0.6s;
 
+		font-size: 0.6em;
+
 		display: inline-block;
 		list-style: none;
 
@@ -25,15 +27,15 @@ nav {
 		transform-origin: 0 ($nav-item-radius - $header-radius - $nav-orbital-radius);
 
 		a {
-			color: #fff;
+			transition: all 0.6s;
+
+			color: white;
 			font-family: "Segoe UI", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
 			font-weight: bold;
-			font-size: 1em;
-
-			background: hsla(0,0%,0%,0.5);
-			box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.7);
+			font-size: 0.35em;
 			text-decoration: none;
-			transition: all 0.6s;
+
+			background: white;
 
 			border-radius: 50%;
 			display: flex;
@@ -56,47 +58,49 @@ nav {
 		}
 
 		&:first-child {
-			transform: rotate(45deg);
+			transform: rotate(20deg);
 
 			a {
-				transform: rotate(-45deg);
+				transform: rotate(-20deg);
 			}
 		}
 
 		&:last-child {
-			transform: rotate(-45deg);
+			transform: rotate(-20deg);
 
 			a {
-				transform: rotate(45deg);
+				transform: rotate(20deg);
 			}
 		}
 	}
 
-	body.collapsed & {
+	body#front-page &,
+	&.expanded {
 		li {
-			font-size: 0.6em;
+			font-size: 1em;
 
 			&:first-child {
-				transform: rotate(20deg);
+				transform: rotate(45deg);
 
 				a {
-					transform: rotate(-20deg);
+					transform: rotate(-45deg);
 				}
 			}
 
 			&:last-child {
-				transform: rotate(-20deg);
+				transform: rotate(-45deg);
 
 				a {
-					transform: rotate(20deg);
+					transform: rotate(45deg);
 				}
 			}
 		}
 
 		a {
-			background: white;
+			background: hsla(0,0%,0%,0.5);
+			box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.7);
 			color: white;
-			font-size: 0.35em;
+			font-size: 1em;
 		}
 	}
 }
