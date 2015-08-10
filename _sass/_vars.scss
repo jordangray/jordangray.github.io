@@ -1,8 +1,28 @@
-$header-radius  : 10em;
-$header-padding : 2em;
-$header-margin  : 3em;
+$typography-text-colour         : #333;
+$typography-link-colour         : #839620;
+$typography-link-hover-colour   : #576607;
+$typography-link-visited-colour : #8D9469;
 
-$nav-orbital-radius : 5em;
-$nav-item-radius    : 4em;
+$header-heading-font-size-small   : 30px;
+$header-paragraph-font-size-small : 19px;
+$header-radius-small              : 5.5em;
+$header-padding-small             : 0.5em;
+$header-margin-small              : 3em;
+$header-collapsed-margin-small    : -3.5em;
+$header-collapsed-overlap-small   : -1.8em;
 
-$nav-collapsed-orbital-radius : -3em;
+$header-heading-font-size   : 50px;
+$header-paragraph-font-size : 31px;
+$header-radius              : 10em;
+$header-padding             : 2em;
+$header-margin              : 3em;
+$header-collapsed-margin    : -6em;
+$header-collapsed-overlap   : -4.2em;
+
+$nav-collapsed-font-size-small : 0.25em;
+$nav-orbital-radius-small      : 4.5em;
+$nav-item-radius-small         : 3em;
+
+$nav-collapsed-font-size : 0.35em;
+$nav-orbital-radius      : 5em;
+$nav-item-radius         : 4em;

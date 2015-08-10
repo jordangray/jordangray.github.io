@@ -1,6 +1,7 @@
 body {
     font: 18px/1.5 "Helvetica Neue", "Open Sans", Calibri, Helvetica, Arial, sans-serif;
     font-weight: 300;
+	color: $typography-text-colour;
 }
 
 h1,
@@ -12,4 +13,21 @@ h3 {
 
 code {
     font-family: Consolas, Courier New, Courier, monospace;
+}
+
+a {
+	color: $typography-link-colour;
+	font-weight: bold;
+	text-decoration: none;
+
+	&:visited {
+		color: $typography-link-visited-colour;
+	}
+
+	&:hover,
+	&:focus {
+		color: $typography-link-hover-colour;
+		border-bottom: 1px solid $typography-link-hover-colour;
+	}
+
 }
