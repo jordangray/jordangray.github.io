@@ -72,8 +72,6 @@ nav {
 	span.current {
 		transition: nav-transition-wait(color background border box-shadow font-size transform height width margin top left);
 		will-change: color background border box-shadow font-size transform height width margin top left;
-		pointer-events: none;
-		-webkit-touch-callout: none;
 
 		color: white;
 		font: {
@@ -168,8 +166,6 @@ nav {
 		a,
 		span.current {
 			transition: nav-transition-immediate(color background border box-shadow font-size transform height width margin top left);
-			pointer-events: auto;
-			-webkit-touch-callout: default;
 			font-size: 1em;
 		}
 
