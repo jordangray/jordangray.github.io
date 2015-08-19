@@ -6,8 +6,8 @@ Portfolio
 =========
 
 
-[Credit Expert][credit-expert]
-------------------------------
+Credit Expert
+-------------
 
 <dl>
 	<dt>Responsibilities</dt>
@@ -15,6 +15,9 @@ Portfolio
 
 	<dt>Technologies used</dt>
 	<dd>JavaScript, SCSS, Angular.js, Node.js, Gulp, Swig</dd>
+
+	<dt>Website</dt>
+	<dd><a href="https://www.creditexpert.co.uk/">creditexpert.co.uk</a></dd>
 </dl>
 
 Experian is the UK's leading credit reference agency, and Credit Expert is their flagship consumer product. It enables members of the public to explore their credit history and understand how they are seen by potential lenders. Experian wanted to refresh the existing site, both to provide a better experience to their customers and to better reflect modern web development practices.
@@ -41,6 +44,9 @@ ShP Portal
 
 	<dt>Technologies used</dt>
 	<dd>CoffeeScript, SCSS, ASP.NET MVC, C#, Entity Framework, Web API</dd>
+
+	<dt>Website</dt>
+	<dd><a href="https://portal.shplimited.co.uk/">portal.shplimited.co.uk</a></dd>
 </dl>
 
 <figure>
@@ -73,8 +79,8 @@ ShP Portal had a threefold impact:
 - Prospective clients are impressed by an exceptionally well-designed and comprehensive account management tool.
 
 
-[UK Transport app][uk-transport-app]
-------------------------------------
+UK Transport app
+----------------
 
 <dl>
 	<dt>Responsibilities</dt>
@@ -82,6 +88,9 @@ ShP Portal had a threefold impact:
 
 	<dt>Technologies used</dt>
 	<dd>JavaScript, CSS</dd>
+
+	<dt>Website</dt>
+	<dd><a href="http://uktransportapp.com/">uktransportapp.com</a></dd>
 </dl>
 
 <figure>
@@ -142,10 +151,6 @@ If you want some short and sweet examples of code I've written, here's a few of 
 
 
 <!-- References -->
-
-[credit-expert]: https://www.creditexpert.co.uk/
-
-[uk-transport-app]: http://uktransportapp.com/
 
 [github-xlsx]: http://webapicontrib.github.io/WebApiContrib.Formatting.Xlsx/
 
