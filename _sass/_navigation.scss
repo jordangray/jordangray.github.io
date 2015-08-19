@@ -1,188 +1,188 @@
 @function nav-transition-wait($props) {
-	 @return nav-transition(0.2s, 0.5s, $props)
+     @return nav-transition(0.2s, 0.5s, $props)
 }
 
 @function nav-transition-immediate($props) {
-	 @return nav-transition(0.2s, 0s, $props)
+     @return nav-transition(0.2s, 0s, $props)
 }
 
 @function nav-transition($speed, $wait, $props) {
-	$transition-list: null;
-	@each $prop in $props {
-		$transition-list: append($transition-list, $prop $speed ease-out $wait, comma);
-	}
-	@return $transition-list;
+    $transition-list: null;
+    @each $prop in $props {
+        $transition-list: append($transition-list, $prop $speed ease-out $wait, comma);
+    }
+    @return $transition-list;
 }
 
 
 nav {
-	ul,
-	li {
-		margin: 0;
-		padding: 0;
-	}
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
 
-	ul {
-		transition: opacity 0.6s;
+    ul {
+        transition: opacity 0.6s;
 
-		position: absolute;
-		left: 50%;
-		top: 50%;
-	}
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
 
-	li {
-		transition: nav-transition-wait(top transform-origin transform);
-		will-change: top transform-origin transform;
+    li {
+        transition: nav-transition-wait(top transform-origin transform);
+        will-change: top transform-origin transform;
 
-		font-size: 0.6em;
+        font-size: 0.6em;
 
-		display: inline-block;
-		list-style: none;
+        display: inline-block;
+        list-style: none;
 
-		position: absolute;
-		top: $header-radius-small + $nav-orbital-radius-small - $nav-item-radius-small;
-		left: 0;
-		transform-origin: 0 ($nav-item-radius-small - $header-radius-small - $nav-orbital-radius-small);
+        position: absolute;
+        top: $header-radius-small + $nav-orbital-radius-small - $nav-item-radius-small;
+        left: 0;
+        transform-origin: 0 ($nav-item-radius-small - $header-radius-small - $nav-orbital-radius-small);
 
-		@media screen and (min-width: 500px) {
-			top: $header-radius + $nav-orbital-radius - $nav-item-radius;
-			transform-origin: 0 ($nav-item-radius - $header-radius - $nav-orbital-radius);
-		}
+        @media screen and (min-width: 30em) {
+            top: $header-radius + $nav-orbital-radius - $nav-item-radius;
+            transform-origin: 0 ($nav-item-radius - $header-radius - $nav-orbital-radius);
+        }
 
-		&:first-child {
-			transform: rotate(20deg);
+        &:first-child {
+            transform: rotate(20deg);
 
-			a,
-			span.current {
-				transform: rotate(-20deg);
-			}
-		}
+            a,
+            span.current {
+                transform: rotate(-20deg);
+            }
+        }
 
-		&:last-child {
-			transform: rotate(-20deg);
+        &:last-child {
+            transform: rotate(-20deg);
 
-			a,
-			span.current {
-				transform: rotate(20deg);
-			}
-		}
-	}
+            a,
+            span.current {
+                transform: rotate(20deg);
+            }
+        }
+    }
 
-	a,
-	span.current {
-		transition: nav-transition-wait(color background border box-shadow font-size transform height width margin top left);
-		will-change: color background border box-shadow font-size transform height width margin top left;
+    a,
+    span.current {
+        transition: nav-transition-wait(color background border box-shadow font-size transform height width margin top left);
+        will-change: color background border box-shadow font-size transform height width margin top left;
 
-		color: white;
-		font: {
-			family: "Segoe UI", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
-			size: $nav-collapsed-font-size-small;
-			weight: normal;
-		}
-		text-decoration: none;
-		text-align: center;
+        color: white;
+        font: {
+            family: "Segoe UI", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+            size: $nav-collapsed-font-size-small;
+            weight: normal;
+        }
+        text-decoration: none;
+        text-align: center;
 
-		background: white;
+        background: white;
 
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		box-sizing: border-box;
-		padding: 1em;
-		height: $nav-item-radius-small * 2;
-		width: $nav-item-radius-small * 2;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 1em;
+        height: $nav-item-radius-small * 2;
+        width: $nav-item-radius-small * 2;
 
-		position: absolute;
-		top: 100%;
-		left: -$nav-item-radius-small;
+        position: absolute;
+        top: 100%;
+        left: -$nav-item-radius-small;
 
 
-		@media screen and (min-width: 500px) {
-			font: {
-				size: $nav-collapsed-font-size;
-				weight: bold;
-			}
-			height: $nav-item-radius * 2;
-			width: $nav-item-radius * 2;
-			left: -$nav-item-radius;
-		}
-	}
+        @media screen and (min-width: 30em) {
+            font: {
+                size: $nav-collapsed-font-size;
+                weight: bold;
+            }
+            height: $nav-item-radius * 2;
+            width: $nav-item-radius * 2;
+            left: -$nav-item-radius;
+        }
+    }
 
-	a:visited {
-		color: white;
-	}
+    a:visited {
+        color: white;
+    }
 
-	span.current {
-		border: 1px solid rgba(black, 0);
-	}
+    span.current {
+        border: 1px solid rgba(black, 0);
+    }
 
-	body#front-page &,
-	header:hover &,
-	&.expanded {
-		li {
-			font-size: 1em;
-			transition: nav-transition-immediate(top transform-origin transform);
+    body#front-page &,
+    header:hover &,
+    &.expanded {
+        li {
+            font-size: 1em;
+            transition: nav-transition-immediate(top transform-origin transform);
 
-			&:first-child {
-				transform: rotate(35deg);
+            &:first-child {
+                transform: rotate(35deg);
 
-				a,
-				span.current {
-					transform: rotate(-35deg);
-				}
-			}
+                a,
+                span.current {
+                    transform: rotate(-35deg);
+                }
+            }
 
-			&:last-child {
-				transform: rotate(-35deg);
+            &:last-child {
+                transform: rotate(-35deg);
 
-				a,
-				span.current {
-					transform: rotate(35deg);
-				}
-			}
+                a,
+                span.current {
+                    transform: rotate(35deg);
+                }
+            }
 
-			@media screen and (min-width: 500px) {
-				&:first-child {
-					transform: rotate(45deg);
+            @media screen and (min-width: 30em) {
+                &:first-child {
+                    transform: rotate(45deg);
 
-					a,
-					span.current {
-						transform: rotate(-45deg);
-					}
-				}
+                    a,
+                    span.current {
+                        transform: rotate(-45deg);
+                    }
+                }
 
-				&:last-child {
-					transform: rotate(-45deg);
+                &:last-child {
+                    transform: rotate(-45deg);
 
-					a,
-					span.current {
-						transform: rotate(45deg);
-					}
-				}
-			}
-		}
+                    a,
+                    span.current {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
 
-		a,
-		span.current {
-			transition: nav-transition-immediate(color background border box-shadow font-size transform height width margin top left);
-			font-size: 1em;
-		}
+        a,
+        span.current {
+            transition: nav-transition-immediate(color background border box-shadow font-size transform height width margin top left);
+            font-size: 1em;
+        }
 
-		a {
-			background: rgba(black, 0.5);
-			&:hover {
-				background: hsla(48, 100%, 84%, 0.7);
-				border: 1px solid rgba(black, 0.2);
-				color: black;
-			}
-		}
+        a {
+            background: rgba(black, 0.5);
+            &:hover {
+                background: hsla(48, 100%, 84%, 0.7);
+                border: 1px solid rgba(black, 0.2);
+                color: black;
+            }
+        }
 
-		span.current {
-			background: rgba(white, 0.8);
-			border: 1px solid rgba(black, 0.5);
-			box-shadow: none;
-			color: black;
-		}
-	}
+        span.current {
+            background: rgba(white, 0.8);
+            border: 1px solid rgba(black, 0.5);
+            box-shadow: none;
+            color: black;
+        }
+    }
 }

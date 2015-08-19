@@ -1,55 +1,62 @@
 figure {
-	display: table;
-	margin: 1em 0;
-	width: 1px;
+    display: table;
+    margin: 1em auto;
+    width: auto;
 
-	&.center {
-		margin: 1em auto;
-		width: auto;
+    img,
+    svg {
+        display: table-row;
+        max-width: 100%;
+        margin: 0 auto;
+    }
 
-		figcaption {
-			text-align: center;
-		}
-	}
+    @media screen and (min-width: 50em) {
+        &.left {
+            float: left;
+            margin: 1em 2em 1em 0;
+        }
 
-	&.left {
-		float: left;
-		margin: 1em 2em 1em 0;
-	}
+        &.right {
+            float: right;
+            margin: 1em 0 1em 2em;
+        }
 
-	&.right {
-		float: right;
-		margin: 1em 0 1em 2em;
-	}
+        &.left,
+        &.right {
+            text-align: left;
+            width: 10em; // Prevent text from growing much larger than the image
 
-	img,
-	svg {
-		display: table-row;
-	}
+            img,
+            svg {
+                max-width: none;
+            }
+        }
+    }
 }
 
 figcaption {
-	font-style: italic;
+    font-style: italic;
+    text-align: center;
 
-	background: white;
-	border-top: 3px solid $typography-text-colour;
+    background: white;
+    border-top: 3px solid $typography-text-colour;
 
-	display: block;
-	padding: 0.3em 0;
+    display: block;
+    padding: 0.3em 0;
 
-	position: relative;
-	z-index: 2;
+    position: relative;
+    z-index: 2;
 
-	&:before {
-		box-shadow: 0 0 3px $typography-text-colour;
+    &:before {
+        box-shadow: 0 0 3px $typography-text-colour;
 
-		content: '';
-		height: 1px;
+        content: '';
+        height: 1px;
 
-		position: absolute;
-		top: -3px;
-		left: 2px;
-		right: 2px;
-		z-index: 1;
-	}
+        position: absolute;
+        top: -3px;
+        left: 2px;
+        right: 2px;
+        z-index: 1;
+    }
 }

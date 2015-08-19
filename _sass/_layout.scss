@@ -21,14 +21,18 @@ main {
     box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.6);
 
     box-sizing: border-box;
-    margin: 0 auto 1em;
-    max-width: 1000px;
+    margin: 0 auto;
+    max-width: 60em;
     overflow-x: auto;
-    padding: 20px;
+    padding: 4em 2em;
     width: 100%;
 
     position: relative;
     z-index: 1;
+
+    h2 {
+      clear: both;
+    }
 
     & > :first-child {
       margin-top: 0;
@@ -38,7 +42,9 @@ main {
       margin-bottom: 0;
     }
 
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 60em) {
+      margin-bottom: 3em;
+      padding: 5em;
       width: 80%;
     }
 }

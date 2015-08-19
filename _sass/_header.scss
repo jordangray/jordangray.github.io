@@ -9,24 +9,56 @@ header {
     height: $header-radius-small * 2;
     width: $header-radius-small * 2;
 
+    position: relative;
+    z-index: 2;
+
+    &:after,
+    &:before {
+        content: '';
+
+        box-shadow: 0 0 5px rgba(white, 0.2),
+                    inset 0 0 5px rgba(white, 0.2);
+        border-radius: 50%;
+
+        position: absolute;
+        top: $header-swirl-offset-small;
+        left: $header-swirl-offset-small;
+        bottom: $header-swirl-offset-small;
+        right: $header-swirl-offset-small;
+        z-index: -1;
+    }
+
+    &:before {
+        transform: translate(0, 0.3em);
+    }
+
+    &:after {
+        transform: translate(0.3em, 0);
+    }
+
     @media screen and (min-width: 500px) {
         margin: $header-collapsed-margin auto $header-collapsed-overlap;
         padding: $header-padding;
         height: $header-radius * 2;
         width: $header-radius * 2;
-    }
 
-    position: relative;
-    z-index: 2;
+        &:after,
+        &:before {
+            top: $header-swirl-offset;
+            left: $header-swirl-offset;
+            bottom: $header-swirl-offset;
+            right: $header-swirl-offset;
+        }
+    }
 
     a.home {
         color: white;
-    	font: {
+        font: {
             family: "Segoe UI Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
             weight: normal;
         }
-    	text-align: center;
-    	
+        text-align: center;
+        
         border: none;
 
         display: block;
@@ -38,7 +70,7 @@ header {
         font-size: $header-heading-font-size-small;
         margin: 0;
 
-        @media screen and (min-width: 500px) {
+        @media screen and (min-width: 30em) {
             font-size: $header-heading-font-size;
         }
     }

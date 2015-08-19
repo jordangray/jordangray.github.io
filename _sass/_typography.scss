@@ -1,14 +1,15 @@
 body {
-    font: 18px/1.5 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 300;
-	color: $typography-text-colour;
+    font: 300 18px/1.5 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+    color: $typography-text-colour;
 }
 
 h1,
 h2,
 h3 {
-    font-family: "Segoe UI Light", Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 300;
+    font: {
+        family: "Segoe UI Light", Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+        weight: 300;
+    }
 }
 
 code {
@@ -16,18 +17,30 @@ code {
 }
 
 a {
-	color: $typography-link-colour;
-	font-weight: bold;
-	text-decoration: none;
+    color: $typography-link-colour;
+    font-weight: bold;
+    text-decoration: none;
 
-	&:visited {
-		color: $typography-link-visited-colour;
-	}
+    &:visited {
+        color: $typography-link-visited-colour;
+    }
 
-	&:hover,
-	&:focus {
-		color: $typography-link-hover-colour;
-		border-bottom: 1px solid $typography-link-hover-colour;
-	}
+    &:hover,
+    &:focus {
+        color: $typography-link-hover-colour;
+        border-bottom: 1px solid $typography-link-hover-colour;
+    }
 
+}
+
+dl {
+    margin: 1em 0;
+}
+
+dt {
+    font-weight: bold;
+
+    &:after {
+        content: ':';
+    }
 }
