@@ -1,0 +1,22 @@
+.project {
+    &:after {
+        background: $typography-separator-colour;
+        content: '';
+
+        clear: both;
+        border: 0.5em double white;
+        border-radius: 50%;
+        display: block;
+        height: 2em;
+        width: 2em;
+        margin: 2em auto;
+    }
+
+    &:last-child:after {
+        content: none;
+    }
+
+    & + & h2 {
+        margin-top: 0;
+    }
+}

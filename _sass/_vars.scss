@@ -1,7 +1,8 @@
 $typography-text-colour         : #333;
-$typography-link-colour         : #839620;
-$typography-link-hover-colour   : #576607;
-$typography-link-visited-colour : #8D9469;
+$typography-link-colour         : #4380a9;
+$typography-link-hover-colour   : saturate(darken($typography-link-colour, 10%), 50%);
+$typography-link-visited-colour : desaturate(lighten($typography-link-colour, 10%), 10%);
+$typography-separator-colour    : #C9DB86;
 
 $header-heading-font-size-small   : 30px;
 $header-paragraph-font-size-small : 19px;

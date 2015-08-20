@@ -16,7 +16,8 @@ Outside of work, I love—love!—to bake, play piano (terribly), am a voracious
 If you want to know more about me, you can find me on [Twitter][twitter], [LinkedIn][linkedin] and [Stack Overflow][stack-overflow].
 
 
-<!-- References -->
+
+[//]: # (References)
 
 [twitter]: https://twitter.com/jordangray
 
