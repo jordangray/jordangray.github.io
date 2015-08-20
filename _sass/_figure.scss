@@ -1,6 +1,6 @@
 figure {
     display: table;
-    margin: 1em auto;
+    margin: 0 auto 1em;
     width: auto;
 
     img,
@@ -13,12 +13,12 @@ figure {
     @media screen and (min-width: 50em) {
         &.left {
             float: left;
-            margin: 1em 2em 1em 0;
+            margin: 0 2em 1em 0;
         }
 
         &.right {
             float: right;
-            margin: 1em 0 1em 2em;
+            margin: 0 0 1em 2em;
         }
 
         &.left,
@@ -39,24 +39,8 @@ figcaption {
     text-align: center;
 
     background: white;
-    border-top: 3px solid $typography-text-colour;
+    border-top: 3px solid #abca6a;
 
     display: block;
     padding: 0.3em 0;
-
-    position: relative;
-    z-index: 2;
-
-    &:before {
-        box-shadow: 0 0 3px $typography-text-colour;
-
-        content: '';
-        height: 1px;
-
-        position: absolute;
-        top: -3px;
-        left: 2px;
-        right: 2px;
-        z-index: 1;
-    }
 }
