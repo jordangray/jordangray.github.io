@@ -1,0 +1,38 @@
+.tt-accordion {
+  background: #fff;
+  border-top: 2px solid #ddd;
+  margin: 1em 0; }
+  .tt-accordion__accordion {
+    margin: 0;
+    padding: 0; }
+  .tt-accordion__header {
+    background: #fafafa;
+    border-bottom: 1px solid #ddd;
+    color: #06f;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    padding: 1.2em 1.5em; }
+    .tt-accordion__header:hover {
+      text-decoration: underline; }
+    .tt-accordion__header--stuck {
+      position: fixed; }
+  .tt-accordion__marker {
+    float: right;
+    font-size: 32px;
+    margin-top: -6px;
+    margin-right: 0;
+    margin-bottom: -12px;
+    margin-left: 0.5em;
+    text-decoration: none !important; }
+  .tt-accordion__content {
+    border: 1px solid #fafafa;
+    border-bottom: 1px solid #ddd;
+    padding: 2em 1.5em; }
+    .tt-accordion__content[aria-hidden="true"] {
+      display: none; }
+    .tt-accordion__content > :first-child {
+      margin-top: 0; }
+    .tt-accordion__content > :last-child {
+      margin-bottom: 0; }

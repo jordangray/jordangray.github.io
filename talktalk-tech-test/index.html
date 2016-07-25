@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+  <charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TalkTalk accordion demo</title>
+  <link rel="stylesheet" href="/tt-accordion.css">
+  <link rel="stylesheet" href="/fonts/icon-font/TalkTalkIcons.css">
+  <link rel="stylesheet" href="/fonts/open-sans/open-sans.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    }
+  </style>
+</head>
+<body class="container">
+
+  <header class="page-header">
+    <h1>TalkTalk accordion demo</h1>
+  </header>
+
+  <main ng-app="tt">
+    <p class="lead">The sections <strong>Create an accordion</strong>, <strong>Accessibility</strong> and <strong>Running the tests</strong> are sticky.</p>
+
+    <tt-accordion-group>
+
+      <tt-accordion header="Prerequisites" open="true">
+        <p>The minimum prerequisites to use this accordion are:</p>
+        <ul>
+          <li><strong>AngularJS 1.5+</strong>.</li>
+          <li><strong>ngAria</strong> (for keyboard accessibility).</li>
+          <li>The <strong>TalkTalk icon font</strong> provided with this test.</li>
+        </ul>
+        <p>For the purposes of the demo page, I also used the Open Sans webfont provided and Bootstrap 3, direct from the CDN. Neither of these are required to use the accordion component. All code was tested on Node.js 6.2.2.</p>
+      </tt-accordion>
+
+      <tt-accordion header="Installing the accordion">
+        <p>Add the accordion CSS to your document head along with the TalkTalk icons font:</p>
+        <pre><code><strong>&lt;link rel="stylesheet" href="dist/tt-accordion.css"></strong>
+&lt;link rel="stylesheet" href="/fonts/icon-font/TalkTalkIcons.css"></code></pre>
+        <p>Then add the accordion JS after the references to AngularJS and ngAria:</p>
+        <pre><code>&lt;script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js">&lt;/script>
+&lt;script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-aria.js">&lt;/script>
+<strong>&lt;script src="dist/tt-accordion.js">&lt;/script></strong></code></pre>
+      </tt-accordion>
+
+      <tt-accordion header="Create an accordion" sticky="true">
+        <p>To create an accordion, use the following structure:</p>
+        <pre><code>&lt;tt-accordion-group>
+  &lt;tt-accordion header="The accordion header" open="true|false" sticky="true|false">
+    [Accordion content]
+  &lt;/tt-accordion>
+&lt;/tt-accordion-group></code></pre>
+        <p>The accordion attributes are:</p>
+        <dl>
+          <dt><code>header</code></dt>
+          <dd>The header text used for this accordion.</dd>
+          <dt><code>open</code></dt>
+          <dd><em>(Default: <code>false</code>.)</em> If set to <code>true</code>, the accordion will be expanded by default; if <code>false</code>, it will be closed.</dd>
+          <dt><code>sticky</code></dt>
+          <dd><em>(Default: <code>false</code>.)</em> If set to <code>true</code>, the accordion header will stick to the top of the viewport while its content is still visible; if <code>false</code>, it will remain static and scroll normally with its content.</dd>
+        </dl>
+      </tt-accordion>
+
+      <tt-accordion header="Accessibility" sticky="true">
+        <p>I implemented some of the recommendations from the <a href="https://www.w3.org/TR/wai-aria-practices/#accordion">WAI Authoring Practices Guide for accordions</a>:</p>
+        <ul>
+          <li>Thanks to <a href="https://docs.angularjs.org/guide/accessibility">ngAria</a>, all accordion headers are focusable and respond to enter/spacebar keyboard events in addition to click events.</li>
+          <li>Accordions have the recommended ARIA roles: <code>tablist</code> for the accordion group, <code>tab</code> for accordion headers and <code>tabpanel</code> for the accordion content.</li>
+          <li>An expanded accordion is indicated by <code>aria-expanded="true"</code> on the accordion header and <code>aria-hidden="false"</code> on the accordion content.</li>
+        </ul>
+        Due to time constraints, I did <strong>not</strong> implement:
+        <ul>
+          <li>The full list of recommended keyboard controls. (There are lots, some of dubious utility.)</li>
+          <li>Using <code>aria-selected</code> to indicate the currently focused accordion.</li>
+        </ul>
+      </tt-accordion>
+
+      <tt-accordion header="Running the demo locally">
+        <p>To run the demo locally, install the required packages from NPM and start it using Gulp.</p>
+        <pre><code>npm install
+npm start</code></pre>
+        <p>The demo page is now running on <a href="http://localhost:8000">localhost:8000</a>.</p>
+      </tt-accordion>
+
+      <tt-accordion header="Running the tests" sticky="true">
+        <p>Before you can run the tests, you should install Protractor and Webdriver:</p>
+        <pre><code>npm install -g protractor
+webdriver-manager update</code></pre>
+        <p>Next, start a server:</p>
+        <pre><code>webdriver-manager start</code></pre>
+        <p>In another command window, start the gulp server:</p>
+        <pre><code>npm start</code></pre>
+        <p>Finally, in another command window, we can run our tests:</p>
+        <pre><code>npm test</code></pre>
+        <p>This will run Protractor using the configuration specified in <code>/test/config.js</code>.</p>
+      </tt-accordion>
+
+      <tt-accordion header="Things I didn&rsquo;t do">
+        <ul>
+          <li>I omitted <strong>smooth opening and closing effects</strong> for the accordions since these were not mentioned in the task description and I didn&rsquo;t have much time.</li>
+          <li>Though I was tempted, I ultimately didn't use <strong>ES6 or browserify</strong>. All my code is in a single ES5 file, which was messy but quick.</li>
+          <li>There is no <strong>minification</strong> of the built code, which would be unacceptable for a production site.</li>
+        </ul>
+      </tt-accordion>
+
+    </tt-accordion-group>
+
+  </main>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-aria.js"></script>
+  <script src="tt-accordion.js"></script>
+</body>
+</html>
